@@ -8,12 +8,13 @@ body {
     color: #333;
 }
 
-.container {
+/* El contenedor principal ya no es tan necesario si las secciones se manejan con max-width y auto margins */
+/* .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
     padding: 20px 0;
-}
+} */
 
 /* Encabezado (Header) */
 header {
@@ -30,17 +31,21 @@ header h1 {
 header nav ul {
     padding: 0;
     list-style: none;
+    display: flex; /* Usamos flexbox para una mejor alineación */
+    justify-content: center; /* Centra los elementos de la navegación */
+    flex-wrap: wrap; /* Permite que los ítems se envuelvan en pantallas pequeñas */
 }
 
 header nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 15px; /* Espacio entre los ítems del menú */
 }
 
 header nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 0; /* Añadido padding para facilitar el click */
+    display: block; /* Para que el padding funcione en todo el área */
 }
 
 /* Secciones de Contenido */
@@ -54,12 +59,14 @@ header nav a {
 .hero h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    padding: 0 15px; /* Añadido padding para evitar que el texto toque los bordes en móviles */
 }
 
 .hero p {
     font-size: 1.2em;
     max-width: 700px;
     margin: 0 auto 30px auto;
+    padding: 0 15px; /* Añadido padding */
 }
 
 .hero button {
@@ -83,7 +90,8 @@ header nav a {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-width: 800px;
+    max-width: 800px; /* Asegura que no sea demasiado ancho */
+    box-sizing: border-box; /* Asegura que el padding no añada al ancho total */
 }
 
 .content-section h2 {
@@ -111,11 +119,12 @@ header nav a {
 #contactForm input[type="text"],
 #contactForm input[type="email"],
 #contactForm textarea {
-    width: calc(100% - 20px);
+    width: calc(100% - 20px); /* Ajustado para el padding */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
+    box-sizing: border-box; /* Crucial para que el padding no desborde el ancho */
 }
 
 #contactForm button[type="submit"] {
@@ -160,6 +169,7 @@ footer {
     border: 1px solid #eee;
     border-radius: 8px;
     background-color: #fafafa;
+    box-sizing: border-box; /* Asegura que el padding no desborde */
 }
 
 #enfermedadSelector {
@@ -169,6 +179,7 @@ footer {
     border: 1px solid #ddd;
     margin-bottom: 15px;
     font-size: 1em;
+    box-sizing: border-box; /* Asegura que el padding no desborde */
 }
 
 .sintomas-display {
@@ -178,6 +189,7 @@ footer {
     border-radius: 5px;
     min-height: 50px;
     margin-top: 15px;
+    box-sizing: border-box; /* Asegura que el padding no desborde */
 }
 
 .sintomas-display h4 {
@@ -213,8 +225,9 @@ footer {
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
-    display: block; /* Para que ocupe todo el ancho si es necesario */
-    margin-top: 20px;
+    display: block;
+    margin: 20px auto 0 auto; /* Centra el botón */
+    width: fit-content; /* Ajusta el ancho al contenido */
 }
 
 #analizarSintomas:hover {
@@ -230,4 +243,79 @@ footer {
     border-radius: 5px;
     font-weight: bold;
     text-align: center;
+}
+
+
+/* --- Media Queries para Responsividad --- */
+
+/* Para pantallas medianas y pequeñas (tabletas y móviles grandes) */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Apila los ítems del menú en pantallas pequeñas */
+        align-items: center; /* Centra los ítems apilados */
+    }
+
+    header nav ul li {
+        margin: 10px 0; /* Más espacio vertical entre los ítems */
+    }
+
+    .hero h2 {
+        font-size: 2em; /* Reduce el tamaño del título principal */
+    }
+
+    .hero p {
+        font-size: 1em; /* Reduce el tamaño del texto */
+    }
+
+    .content-section {
+        padding: 20px 15px; /* Reduce el padding para más espacio horizontal */
+        margin: 15px auto; /* Ajusta el margen */
+    }
+
+    /* Asegúrate de que los formularios y selectores ocupen todo el ancho disponible */
+    #contactForm input[type="text"],
+    #contactForm input[type="email"],
+    #contactForm textarea,
+    #enfermedadSelector {
+        width: 100%; /* Ocupa el 100% del contenedor padre */
+    }
+
+    .checkbox-list {
+        grid-template-columns: 1fr; /* Apila los checkboxes para fácil lectura */
+        gap: 8px;
+    }
+
+    #analizarSintomas {
+        width: 100%; /* El botón ocupa todo el ancho */
+        padding: 15px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles antiguos o muy estrechos) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em; /* Ajusta el tamaño del título del encabezado */
+    }
+
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 0.95em;
+    }
+
+    .content-section {
+        padding: 15px 10px; /* Más reducción de padding */
+        margin: 10px auto;
+    }
+
+    .warning-message {
+        font-size: 0.9em; /* Texto de advertencia un poco más pequeño */
+        padding: 10px;
+    }
 }
