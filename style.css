@@ -6,15 +6,8 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden; /* ¡NUEVO! Previene el scroll horizontal no deseado */
 }
-
-/* El contenedor principal ya no es tan necesario si las secciones se manejan con max-width y auto margins */
-/* .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
-} */
 
 /* Encabezado (Header) */
 header {
@@ -312,6 +305,8 @@ footer {
     .content-section {
         padding: 15px 10px; /* Más reducción de padding */
         margin: 10px auto;
+        /* ¡NUEVO! Asegura que las secciones no desborden */
+        max-width: calc(100% - 20px); /* 100% del ancho menos el margen horizontal */
     }
 
     .warning-message {
