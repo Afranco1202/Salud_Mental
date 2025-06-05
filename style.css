@@ -6,7 +6,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    overflow-x: hidden; /* ¡NUEVO! Previene el scroll horizontal no deseado */
+    overflow-x: hidden; /* Previene el scroll horizontal no deseado */
 }
 
 /* Encabezado (Header) */
@@ -24,26 +24,26 @@ header h1 {
 header nav ul {
     padding: 0;
     list-style: none;
-    display: flex; /* Usamos flexbox para una mejor alineación */
-    justify-content: center; /* Centra los elementos de la navegación */
-    flex-wrap: wrap; /* Permite que los ítems se envuelvan en pantallas pequeñas */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
-    margin: 0 15px; /* Espacio entre los ítems del menú */
+    margin: 0 15px;
 }
 
 header nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 0; /* Añadido padding para facilitar el click */
-    display: block; /* Para que el padding funcione en todo el área */
+    padding: 5px 0;
+    display: block;
 }
 
 /* Secciones de Contenido */
 .hero {
-    background: #e0f2e0; /* Fondo más claro para la sección principal */
+    background: #e0f2e0;
     color: #333;
     padding: 60px 0;
     text-align: center;
@@ -52,18 +52,18 @@ header nav a {
 .hero h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    padding: 0 15px; /* Añadido padding para evitar que el texto toque los bordes en móviles */
+    padding: 0 15px;
 }
 
 .hero p {
     font-size: 1.2em;
     max-width: 700px;
     margin: 0 auto 30px auto;
-    padding: 0 15px; /* Añadido padding */
+    padding: 0 15px;
 }
 
 .hero button {
-    background: #4CAF50; /* Verde más oscuro para el botón */
+    background: #4CAF50;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -83,8 +83,13 @@ header nav a {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    max-width: 800px; /* Asegura que no sea demasiado ancho */
-    box-sizing: border-box; /* Asegura que el padding no añada al ancho total */
+    max-width: 800px;
+    box-sizing: border-box;
+    /* --- ELIMINADAS LAS PROPIEDADES DE ANIMACIÓN --- */
+    /* opacity: 0; */
+    /* transform: translateY(20px); */
+    /* transition: opacity 0.6s ease-out, transform 0.6s ease-out; */
+    /* ----------------------------------------------- */
 }
 
 .content-section h2 {
@@ -112,12 +117,12 @@ header nav a {
 #contactForm input[type="text"],
 #contactForm input[type="email"],
 #contactForm textarea {
-    width: calc(100% - 20px); /* Ajustado para el padding */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box; /* Crucial para que el padding no desborde el ancho */
+    box-sizing: border-box;
 }
 
 #contactForm button[type="submit"] {
@@ -146,8 +151,8 @@ footer {
 
 /* Estilos para el selector de síntomas */
 .warning-message {
-    background-color: #ffe0b2; /* Naranja suave */
-    border: 1px solid #ff9800; /* Borde naranja */
+    background-color: #ffe0b2;
+    border: 1px solid #ff9800;
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -162,7 +167,7 @@ footer {
     border: 1px solid #eee;
     border-radius: 8px;
     background-color: #fafafa;
-    box-sizing: border-box; /* Asegura que el padding no desborde */
+    box-sizing: border-box;
 }
 
 #enfermedadSelector {
@@ -172,17 +177,17 @@ footer {
     border: 1px solid #ddd;
     margin-bottom: 15px;
     font-size: 1em;
-    box-sizing: border-box; /* Asegura que el padding no desborde */
+    box-sizing: border-box;
 }
 
 .sintomas-display {
-    border: 1px solid #cfe8cf; /* Borde verde claro */
-    background-color: #f7fcf7; /* Fondo verde muy claro */
+    border: 1px solid #cfe8cf;
+    background-color: #f7fcf7;
     padding: 15px;
     border-radius: 5px;
     min-height: 50px;
     margin-top: 15px;
-    box-sizing: border-box; /* Asegura que el padding no desborde */
+    box-sizing: border-box;
 }
 
 .sintomas-display h4 {
@@ -210,7 +215,7 @@ footer {
 }
 
 #analizarSintomas {
-    background: #007bff; /* Azul para la acción principal */
+    background: #007bff;
     color: white;
     padding: 12px 25px;
     border: none;
@@ -219,8 +224,8 @@ footer {
     font-size: 1em;
     transition: background-color 0.3s ease;
     display: block;
-    margin: 20px auto 0 auto; /* Centra el botón */
-    width: fit-content; /* Ajusta el ancho al contenido */
+    margin: 20px auto 0 auto;
+    width: fit-content;
 }
 
 #analizarSintomas:hover {
@@ -244,42 +249,41 @@ footer {
 /* Para pantallas medianas y pequeñas (tabletas y móviles grandes) */
 @media (max-width: 768px) {
     header nav ul {
-        flex-direction: column; /* Apila los ítems del menú en pantallas pequeñas */
-        align-items: center; /* Centra los ítems apilados */
+        flex-direction: column;
+        align-items: center;
     }
 
     header nav ul li {
-        margin: 10px 0; /* Más espacio vertical entre los ítems */
+        margin: 10px 0;
     }
 
     .hero h2 {
-        font-size: 2em; /* Reduce el tamaño del título principal */
+        font-size: 2em;
     }
 
     .hero p {
-        font-size: 1em; /* Reduce el tamaño del texto */
+        font-size: 1em;
     }
 
     .content-section {
-        padding: 20px 15px; /* Reduce el padding para más espacio horizontal */
-        margin: 15px auto; /* Ajusta el margen */
+        padding: 20px 15px;
+        margin: 15px auto;
     }
 
-    /* Asegúrate de que los formularios y selectores ocupen todo el ancho disponible */
     #contactForm input[type="text"],
     #contactForm input[type="email"],
     #contactForm textarea,
     #enfermedadSelector {
-        width: 100%; /* Ocupa el 100% del contenedor padre */
+        width: 100%;
     }
 
     .checkbox-list {
-        grid-template-columns: 1fr; /* Apila los checkboxes para fácil lectura */
+        grid-template-columns: 1fr;
         gap: 8px;
     }
 
     #analizarSintomas {
-        width: 100%; /* El botón ocupa todo el ancho */
+        width: 100%;
         padding: 15px;
     }
 }
@@ -287,7 +291,7 @@ footer {
 /* Para pantallas muy pequeñas (móviles antiguos o muy estrechos) */
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.8em; /* Ajusta el tamaño del título del encabezado */
+        font-size: 1.8em;
     }
 
     .hero {
@@ -303,14 +307,13 @@ footer {
     }
 
     .content-section {
-        padding: 15px 10px; /* Más reducción de padding */
+        padding: 15px 10px;
         margin: 10px auto;
-        /* ¡NUEVO! Asegura que las secciones no desborden */
-        max-width: calc(100% - 20px); /* 100% del ancho menos el margen horizontal */
+        max-width: calc(100% - 20px);
     }
 
     .warning-message {
-        font-size: 0.9em; /* Texto de advertencia un poco más pequeño */
+        font-size: 0.9em;
         padding: 10px;
     }
 }
