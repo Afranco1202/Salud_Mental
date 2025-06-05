@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Mental: Tu Bienestar es Prioridad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a Tu Espacio de Salud Mental</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="#sintomas-selector">Sintomas y Orientación</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <h2>Cuidar tu mente es tan importante como cuidar tu cuerpo.</h2>
+            <p>Encuentra información, apoyo y herramientas para mantener un equilibrio emocional y mental saludable.</p>
+            <button id="botonInfo">Más Información</button>
+        </section>
+
+        <section id="informacion" class="content-section">
+            <h2>Comprendiendo la Salud Mental</h2>
+            <p>La salud mental abarca nuestro bienestar emocional, psicológico y social. Afecta la forma en que pensamos, sentimos y actuamos cuando lidiamos con la vida. También ayuda a determinar cómo manejamos el estrés, nos relacionamos con los demás y tomamos decisiones.</p>
+            <p>Es importante recordar que la salud mental es un proceso continuo y puede fluctuar a lo largo de la vida. No hay vergüenza en buscar ayuda.</p>
+            <h3>Temas Clave:</h3>
+            <ul>
+                <li>Ansiedad</li>
+                <li>Depresión</li>
+                <li>Estrés</li>
+                <li>Bienestar emocional</li>
+                <li>Manejo de emociones</li>
+            </ul>
+        </section>
+
+        <section id="sintomas-selector" class="content-section">
+            <h2>¿Qué te preocupa? Explorando Síntomas Comunes</h2>
+            <p class="warning-message">
+                **IMPORTANTE:** Esta herramienta es solo para fines informativos y de orientación general. **No es un sustituto de un diagnóstico médico profesional.** Si experimentas síntomas preocupantes, por favor, busca la ayuda de un profesional de la salud mental.
+            </p>
+
+            <div class="selector-container">
+                <h3>1. Selecciona una condición para ver sus síntomas:</h3>
+                <select id="enfermedadSelector">
+                    <option value="">-- Selecciona una condición --</option>
+                    <option value="ansiedad">Trastornos de Ansiedad</option>
+                    <option value="depresion">Depresión</option>
+                    <option value="estres">Estrés Crónico</option>
+                    <option value="bipolar">Trastorno Bipolar</option>
+                    <option value="toc">Trastorno Obsesivo-Compulsivo (TOC)</option>
+                </select>
+
+                <div id="sintomasEnfermedad" class="sintomas-display">
+                    </div>
+            </div>
+
+            <div class="selector-container">
+                <h3>2. Selecciona los síntomas que experimentas:</h3>
+                <div id="checkboxSintomas" class="checkbox-list">
+                    </div>
+                <button id="analizarSintomas">Analizar Mis Síntomas</button>
+                <p id="resultadoAnalisis" class="resultado-display"></p>
+            </div>
+        </section>
+
+        <section id="recursos" class="content-section">
+            <h2>Recursos y Apoyo</h2>
+            <p>Aquí encontrarás enlaces a organizaciones, artículos y herramientas que pueden ser de utilidad:</p>
+            <ul>
+                <li><a href="https://www.who.int/es/news-room/fact-sheets/detail/mental-health" target="_blank">Organización Mundial de la Salud (OMS) - Salud Mental</a></li>
+                <li><a href="https://www.nimh.nih.gov/health/topics/mental-health-basics" target="_blank">Instituto Nacional de Salud Mental (NIMH)</a> (en inglés, pero con mucha información)</li>
+                <li>Artículos sobre técnicas de relajación y mindfulness.</li>
+                <li>Directorios de profesionales de la salud mental.</li>
+            </ul>
+        </section>
+
+        <section id="contacto" class="content-section">
+            <h2>¿Necesitas Ayuda?</h2>
+            <p>Si sientes que necesitas hablar con alguien o buscar apoyo profesional, no dudes en contactar a un especialista. Aquí hay algunas opciones:</p>
+            <form id="contactForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            <p id="formMessage" style="color: green;"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Salud Mental. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

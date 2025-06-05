@@ -1,0 +1,233 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Encabezado (Header) */
+header {
+    background: #5cb85c; /* Un verde suave para la salud */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Secciones de Contenido */
+.hero {
+    background: #e0f2e0; /* Fondo más claro para la sección principal */
+    color: #333;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.hero button {
+    background: #4CAF50; /* Verde más oscuro para el botón */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #45a049;
+}
+
+.content-section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 800px;
+}
+
+.content-section h2 {
+    color: #5cb85c;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+}
+
+/* Formulario de Contacto */
+#contactForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contactForm button[type="submit"] {
+    background: #5cb85c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#contactForm button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Pie de Página (Footer) */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 30px;
+}
+
+/* Estilos para el selector de síntomas */
+.warning-message {
+    background-color: #ffe0b2; /* Naranja suave */
+    border: 1px solid #ff9800; /* Borde naranja */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.selector-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+#enfermedadSelector {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    font-size: 1em;
+}
+
+.sintomas-display {
+    border: 1px solid #cfe8cf; /* Borde verde claro */
+    background-color: #f7fcf7; /* Fondo verde muy claro */
+    padding: 15px;
+    border-radius: 5px;
+    min-height: 50px;
+    margin-top: 15px;
+}
+
+.sintomas-display h4 {
+    color: #4CAF50;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.checkbox-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.checkbox-list label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox-list input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+#analizarSintomas {
+    background: #007bff; /* Azul para la acción principal */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    display: block; /* Para que ocupe todo el ancho si es necesario */
+    margin-top: 20px;
+}
+
+#analizarSintomas:hover {
+    background-color: #0056b3;
+}
+
+.resultado-display {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #d4edda;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
