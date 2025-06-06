@@ -6,7 +6,10 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
-    overflow-x: hidden; /* Asegura que no haya scroll horizontal no deseado */
+    overflow-x: hidden; /* Previene el scroll horizontal no deseado */
+    /* Nueva propiedad: para forzar el repintado en algunos navegadores */
+    -webkit-text-size-adjust: 100%; /* Para Webkit (iOS/Android) */
+    text-size-adjust: 100%;
 }
 
 /* Encabezado (Header) */
@@ -85,19 +88,20 @@ header nav a {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     max-width: 800px;
     box-sizing: border-box;
-    /* Asegurarse de que esté visible por defecto */
-    opacity: 1; /* ¡NUEVO! Fuerza la opacidad a 1 */
-    transform: none; /* ¡NUEVO! Elimina cualquier transformación residual */
-    display: block; /* ¡NUEVO! Asegura que no esté oculto */
-    visibility: visible; /* ¡NUEVO! Asegura que no esté oculto */
+    opacity: 1; /* Fuerza la opacidad a 1 */
+    transform: none; /* Elimina cualquier transformación residual */
+    display: block; /* Asegura que no esté oculto */
+    visibility: visible; /* Asegura que no esté oculto */
 }
 
 /* Estilo específico para la sección de síntomas y orientación */
 #sintomas-selector {
-    position: relative; /* ¡NUEVO! Asegura que z-index funcione */
-    z-index: 10; /* ¡NUEVO! Lo pone por encima de otros elementos */
+    position: relative; /* Asegura que z-index funcione */
+    z-index: 10; /* Lo pone por encima de otros elementos */
+    /* Asegura que el contenido se ajuste */
+    word-wrap: break-word; /* ¡NUEVO! Rompe palabras largas si es necesario */
+    overflow-wrap: break-word; /* ¡NUEVO! Alternativa para romper palabras largas */
 }
-
 
 .content-section h2 {
     color: #5cb85c;
@@ -108,6 +112,9 @@ header nav a {
 .content-section ul {
     list-style-type: disc;
     margin-left: 20px;
+    /* Asegura que los ítems de lista no desborden */
+    word-wrap: break-word; /* ¡NUEVO! */
+    overflow-wrap: break-word; /* ¡NUEVO! */
 }
 
 .content-section ul li {
